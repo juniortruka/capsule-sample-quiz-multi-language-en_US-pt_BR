@@ -1,0 +1,21 @@
+capsule-info {
+  // Nome de ixibição da cápsula 
+  display-name (Exemplo Quiz)
+  //Nome do desenvolvidor, por padrão está como o criador original e empresa que criou a bixby 
+  developer-name (Viv Labs, Inc.)
+  // icóne que será ixibido com o nome de ixibição
+  icon-asset (icons/bixby_launcher.png)
+  // descrição  da cápsula 
+  description ("An example capsule that demonstrates how to build a quiz")
+  // Link da pagina do desenvolvidor, por padrão está como da bixby Developers 
+  website-url (https://bixbydevelopers.com/)
+  // Chave de pesquisa na loja, aonde os usuários irá achar sua cápusla quando falar ou escrever uma busca na loja bixby 
+  search-keywords{
+    keyword (quiz)
+  }
+  // Nome/ frase de dispacho, ela é a frase que aciona sua cápsula e por isso é único em todo idioma escolhido
+  // Caso  já exista uma cápsula em quaquer loja com essa frase de despacho, a equipe bixby não irá aprovar sua aplicação bixby.
+  // Ele terá que ser usado nas dicas do idioma escolhido.
+  dispatch-name (Exemplo Quiz)
+  
+}

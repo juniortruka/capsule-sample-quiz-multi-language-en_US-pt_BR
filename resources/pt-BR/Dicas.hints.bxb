@@ -1,0 +1,16 @@
+hints {
+  uncategorized {
+
+  // Essas são as dicas da sua cápsula, você pode alterar ou criar mais. 
+  // Observe que o nome de dispacho está presente aqui (Exemplo quiz) antes com um termo incial "Com"
+    hint (Com Exemplo Quiz, start a quiz)
+    hint (Com Exemplo Quiz, start the president quiz)
+    hint (Com Exemplo Quiz, start the funny quiz)
+  }
+}
+
+//Obs.: Na hora do treinamento em training, deve treinar sua cápsula com o "termo inicial"+"nome de dispacho"+ restante da frase. 
+// Exemplo: 
+//  - Com Exemplo Quiz, inicie o quiz 
+// - Com Exemplo Quiz, abra o quiz...
+

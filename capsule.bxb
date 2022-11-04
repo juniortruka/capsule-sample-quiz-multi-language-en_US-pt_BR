@@ -1,0 +1,38 @@
+capsule {
+  // esse id é o nome de idenficação da cápsula
+  id (example.mUltilanguageQuiz)
+  // versão da cápsula 
+  version (0.1.0)
+  // formato dela, por padrão está como 3
+  format (3)
+  // targests ou alvos da cápsula, elas são as localidades, dispositivos e idiomas que queira que ela fique disponível 
+  targets {
+    // alvo para inglês dos Estados Unidos, onde será para smartphones e tablets Samsung.
+    target (bixby-mobile-en-US)
+   // alvo para o portguês Brasil, onde será também para smartphones e tabletes Samsung.
+    target (bixby-mobile-pt-BR)
+    // Obs.: existe 4 categorias de dispositivos Samsung com a bixby :
+    // - Mobile : Smartphones e tablets. 
+    // target : target (bixby-mobile-en-US) , target (bixby-mobile-pt-BR), ...
+    // - Wearebles (relógios inteligentes)
+    // - Smart TV's (Smart TV's que vem com a bixby)
+    // - Smart Refrigerator (Geladeiras inteligentes)
+  }
+  capsule-imports {
+    import (viv.core) { 
+      as (core) 
+    }
+  }
+  // Versão  do Runtime: Algumas funções da bixby só dunciona com a versão  5.
+  runtime-version (5)
+  // As lojas ou Bixby Marketplace que queira que a cápsula pode ser inserida, caso seja aprovada publicamente.
+  store-countries {
+   // Por padrão está como TODAS as lojas que os idiomas são suportadas.
+    all
+  }
+  // Seção da loja bixby, o tipo de categoria sua cápsula terá.
+  store-sections {
+    // Por padrão, os quizzes da bixby estão na seção GamesAndFun
+    section (GamesAndFun)
+  }
+}

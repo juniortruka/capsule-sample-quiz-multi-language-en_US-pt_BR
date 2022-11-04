@@ -1,0 +1,109 @@
+// Localized strings used by FindQuiz view
+
+template-macro-def (WELCOME_TO_QUIZ) {
+   params {
+    param (quizzes) {
+      type (Quiz)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    template ("Bem vindo ao Menu Quiz da bixby. Existem #{size(quizzes)} quizzes disponíveis")
+  }
+}
+
+template-macro-def (QUIZ_SELECTION_QUESTION) {
+   params {
+    param (quizzes) {
+      type (Quiz)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    choose (Random) {
+      template ("Bem vindo ao Menu Quiz da Bixby. Qual quiz gostaria de fazer?")
+    template ("Bem vindo ao Quiz da Bixby. Qual destes #{size(quizzes)} quizzes você gostaria de fazer?")
+    }
+  }
+}
+
+template-macro-def (ITEM-SELECTION-QUESTION) {
+  params {
+    param (quizzes) {
+      type (Quiz)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    choose (Random) {
+      template ("Qual quiz você gostaria de fazer?")
+      template ("Qual quiz parece bom para você?")
+    }
+  }
+}
+
+template-macro-def (OVERFLOW_STATEMENT) {
+  content {
+    template ("Esses são todos os quizzes que tenho.")
+  }
+}
+
+template-macro-def (UNDERFLOW_STATEMENT) {
+  content {
+    template ("Esta é a primeira lista de quizzes.")
+  }
+}
+
+template-macro-def (RESULT_NEXT_QUESTION) {
+  content {
+    template ("Ou diga próximo para mais quizzes.")
+  }
+}
+
+template-macro-def (NEXT_QUIZZES) {
+  params { 
+  param (pageSize) {
+      type (core.Integer)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    template ("Os próximos #{pageSize} quizzes são")
+  }
+}
+
+template-macro-def (LAST_QUIZZES) {
+  params { 
+  param (pageSize) {
+      type (core.Integer)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    template ("Os últimos #{pageSize} quizzes são")
+  }
+}
+
+template-macro-def (LAST_QUIZ) {
+  content {
+    template ("O último quiz é")
+  }
+}
+
+
+template-macro-def (QUIZ_LIST_SUMMARY) {
+  params {
+    param (quizzes) {
+      type (Quiz)
+      min (Required) max (Many)
+    }
+  }
+  content {
+    template("#{value(quizzes.title)} tem #{size(quizzes.questions)} questões.")
+  }
+}
